@@ -10,7 +10,7 @@ int is_vowel(char c){
 int main() {
     // TODO: Write your code here
     // 1. Print the prompt message
-    printf("Enter a sentence: \n");
+    printf("Enter a sentence: ");
     // 2. Declare a character array named 'sentence' with 200 elements
     char sentence[200];
     int vowel_count = 0;
@@ -28,6 +28,10 @@ int main() {
             vowel_count++;
         }
     }
-    printf("Vowel count: %d",vowel_count);
+    for (int i = 0; sentence[i] != '\0'; i++){
+        sentence[i] = toupper(sentence[i]);
+    }
+    printf("Vowel count: %d\n",vowel_count);
+    printf("Uppercase: %s", sentence);
     return 0;
 }
