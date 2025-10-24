@@ -17,10 +17,9 @@ int main() {
     // 3. Read input using scanf with %s format specifier
     scanf("%s",&sentence);
     // 4. Print the entered word and its length
-    printf("You entered: %s\n", sentence);
+    printf("Original: %s\n", sentence);
     int length = strlen(sentence);
-    printf("Character count: %d\n", length);
-    printf("Length: %d\n", length);
+    printf("Characters: %d\n", length);
     for (int i = 0; sentence[i] != '\0'; i++){
         // Print the character being processed
         
@@ -31,7 +30,7 @@ int main() {
     for (int i = 0; sentence[i] != '\0'; i++){
         sentence[i] = toupper(sentence[i]);
     }
-    printf("Vowel count: %d\n",vowel_count);
+    printf("Vowels: %d\n",vowel_count);
     printf("Uppercase: %s", sentence);
     return 0;
 }
